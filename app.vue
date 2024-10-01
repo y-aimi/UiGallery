@@ -8,7 +8,7 @@ const instructor = reactive({
 });
 console.log(instructor);
 const d = reactive();
-console.log(d, foo);
+console.log(d);
 </script>
 
 <template>

@@ -1,6 +1,17 @@
+<script>
+const price = ref(9.99);
+console.log(price.value);
+
+const instructor = reactive({
+  name: 'test',
+  age: 20,
+});
+console.log(instructor);
+const d = reactive();
+console.log(d, foo);
+</script>
+
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+  <NuxtRouteAnnouncer />
+  <NuxtWelcome />
 </template>

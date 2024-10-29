@@ -1,4 +1,10 @@
 <script>
+useHead({
+  title: 'UIギャラリー',
+  meta: [
+    { name: 'description', content: 'UIのギャラリーサイトです' },
+  ],
+});
 const price = ref(9.99);
 console.log(price.value);
 
@@ -12,6 +18,7 @@ console.log(d);
 </script>
 
 <template>
-  <NuxtRouteAnnouncer />
-  <NuxtWelcome />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>

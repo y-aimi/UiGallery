@@ -12,4 +12,8 @@ export default defineNuxtConfig({
       },
     },
   },
+  app: {
+    /* 共通トランジション */
+    pageTransition: { name: 'page', mode: 'out-in' },
+  },
 });

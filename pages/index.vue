@@ -98,7 +98,7 @@ const className = ref('red');
       toggle style
     </button>
     <div
-      style=""
+      style="padding: 10px"
       :style="{ color: 'red', backgroundColor: 'green' }"
     >
       styleです
@@ -110,9 +110,11 @@ const className = ref('red');
 .red {
   color: red
 }
+
 .bg-blue {
   background-color: blue;
 }
+
 .border {
   border: 1px solid red
 }

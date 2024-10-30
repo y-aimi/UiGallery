@@ -1,12 +1,15 @@
 {
   "eslint.experimental.useFlatConfig": true,
   "editor.formatOnSave": true,
+  "css.validate": false,
+  "stylelint.validate": [
+    "vue",
+    "css"
+  ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit",
     "source.formatDocument": "explicit",
     "source.addMissingImports": "explicit"
   },
-  "[css]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
 }

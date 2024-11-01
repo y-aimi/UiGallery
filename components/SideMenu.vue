@@ -47,6 +47,18 @@ export default defineComponent({
           />
         </NuxtLink>
       </li>
+      <li>
+        <NuxtLink
+          to="/"
+          class="side-menu-li"
+        >
+          <p>データフェッチ</p>
+          <font-awesome-icon
+            :icon="['fas', 'chevron-right']"
+            style="display: block; height: 1.6rem; width: 1.6rem;"
+          />
+        </NuxtLink>
+      </li>
     </ul>
   </nav>
 </template>

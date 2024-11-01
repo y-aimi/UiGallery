@@ -12,6 +12,13 @@ export default defineNuxtConfig({
       },
     },
   },
+  build: {
+    transpile: [
+      '@fortawesome/vue-fontawesome',
+      '@fortawesome/fontawesome-svg-core',
+      '@fortawesome/free-solid-svg-icons',
+    ],
+  },
   app: {
     /* 共通トランジション */
     pageTransition: { name: 'page', mode: 'out-in' },

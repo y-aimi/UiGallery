@@ -1,17 +1,4 @@
-<script>
-import { defineComponent } from 'vue';
-import { AppColors } from '~/common/AppColors';
-import { AppConst } from '~/common/AppConst';
-
-// style定数呼び出し
-export default defineComponent({
-  setup() {
-    return ({
-      AppColors,
-      AppConst,
-    });
-  },
-});
+<script setup>
 </script>
 
 <template>

@@ -18,9 +18,16 @@ export default defineComponent({
       <h2 class="side-menu-h2">
         概要
       </h2>
-      <li class="side-menu-li">
-        <NuxtLink to="/">
+      <li>
+        <NuxtLink
+          to="/"
+          class="side-menu-li"
+        >
           <p>はじめる</p>
+          <font-awesome-icon
+            :icon="['fas', 'chevron-right']"
+            style="display: block; height: 1.6rem; width: 1.6rem;"
+          />
         </NuxtLink>
       </li>
     </ul>
@@ -28,9 +35,16 @@ export default defineComponent({
       <h2 class="side-menu-h2">
         コンポーネント
       </h2>
-      <li class="side-menu-li">
-        <NuxtLink to="/button">
+      <li>
+        <NuxtLink
+          to="/button"
+          class="side-menu-li"
+        >
           <p>ボタン</p>
+          <font-awesome-icon
+            :icon="['fas', 'chevron-right']"
+            style="display: block; height: 1.6rem; width: 1.6rem;"
+          />
         </NuxtLink>
       </li>
     </ul>

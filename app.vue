@@ -13,7 +13,7 @@ useHead({
   </NuxtLayout>
 </template>
 
-<style>
+<style scoped>
   /* 共通トランジション */
   .page-enter-active,
   .page-leave-active {

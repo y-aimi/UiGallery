@@ -1,15 +1,15 @@
 <template>
   <div>
-    <h1 class="button-h1">
+    <h1 class="h1">
       ボタン
     </h1>
-    <div class="button-text-container">
+    <div class="text-container">
       <p>ボタンのUIギャラリーです</p>
     </div>
-    <h2 class="button-h2">
+    <h2 class="h2">
       基本デザイン
     </h2>
-    <p class="button-text-container">
+    <p class="text-container">
       基本的なデザインパターン
     </p>
     <ButtonDefault />
@@ -17,10 +17,10 @@
       html-string="{ButtonDefaultHtmlString}"
       css-string="{ButtonDefaultCssString}"
     /> -->
-    <h2 class="button-h2">
+    <h2 class="h2">
       アニメーションデザイン
     </h2>
-    <p class="button-text-container">
+    <p class="text-container">
       シャドウアニメーション
     </p>
     <!-- <ButtonShadow />
@@ -28,7 +28,7 @@
       html-string="{ButtonShadowHtmlString}"
       css-string="{ButtonShadowCssString}"
     /> -->
-    <p class="button-text-container">
+    <p class="text-container">
       スケールアニメーション
     </p>
     <!-- <ButtonScale />
@@ -39,25 +39,25 @@
   </div>
 </template>
 
-<style>
-.button-h1 {
+<style scoped>
+.h1 {
   font-size: 2.4rem;
   font-weight: bold
 }
 
-.button-h2 {
+.h2 {
   font-size: 2rem;
   font-weight: bold;
   margin-top: 4rem
 }
 
 @media (width >= 960px) {
-  .button-h1 {
+  .h1 {
     font-size: 3.2rem
   }
 }
 
-.button-text-container {
+.text-container {
   margin: 3.2rem 1.6rem 1.6rem;
 }
 </style>

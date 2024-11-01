@@ -14,13 +14,13 @@
   </div>
 </template>
 
-<style>
-html {
+<style scoped>
+:global(html) {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 62.5%;
 }
 
-header, main, footer {
+:global(header, main, footer) {
   font-size: 1.6rem;
 }
 

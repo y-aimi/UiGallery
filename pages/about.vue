@@ -116,7 +116,7 @@ console.log(d);
   </div>
 </template>
 
-<style>
+<style scoped>
 .red {
   color: red
 }

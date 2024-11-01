@@ -2,11 +2,11 @@
 </script>
 
 <template>
-  <div class="side-nav" />
+  <div class="nav" />
 </template>
 
-<style>
-.side-nav {
+<style scoped>
+.nav {
   flex: 1;
   position: sticky;
   top: 4.8rem;

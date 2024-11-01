@@ -3,11 +3,11 @@ import { AppColors } from '~/common/AppColors';
 </script>
 
 <template>
-  <header class="app-header" />
+  <header class="header" />
 </template>
 
-<style>
-.app-header {
+<style scoped>
+.header {
   z-index: 100;
   position: fixed;
   backdrop-filter: blur(5px);

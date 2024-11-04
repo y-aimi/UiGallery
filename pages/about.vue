@@ -61,6 +61,7 @@ console.log(d);
 <template>
   <div>
     <h1>Welcome to the ああああ</h1>
+    <!-- eslint-disable vue/no-v-html -->
     <div v-html="message" />
     <a v-bind="{ id: vueId, href: vueURL }">Vue.js</a>
     <p>{{ count }}</p>

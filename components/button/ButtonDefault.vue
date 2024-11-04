@@ -76,42 +76,6 @@ import { AppColors } from '~/common/AppColors';
 </template>
 
 <style scoped>
-.important {
-  color: v-bind('AppColors.red600');
-}
-
-.button-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 1.2rem;
-  border: v-bind(`0.2rem solid ${AppColors.gray300}`);
-  border-radius: 0.5rem;
-  margin-bottom: 1.6rem;
-  background-color: v-bind('AppColors.gray50')
-}
-
-.button-text-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  font-size: 1.2rem;
-  width: 50%;
-  padding: 2.4rem 0;
-  border-bottom: v-bind(`0.2rem solid ${AppColors.gray200}`)
-}
-
-.button-text-end-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  font-size: 1.2rem;
-  width: 50%;
-  padding: 2.4rem 0
-}
-
 .button-fill-1 {
   padding: 1rem 2.4rem;
   border: v-bind(`0.2rem solid ${AppColors.lightBlue900}`);

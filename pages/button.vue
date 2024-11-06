@@ -25,6 +25,37 @@ const ButtonDefaultCssContent = ref(`
 .button:active {
   background-color: #008BF2;
 }`);
+
+const ButtonShadowHtmlContent = ref(`
+<button class="buttonShadow">
+  ボタン
+</button>
+`);
+
+const ButtonShadowCssContent = ref(`
+.buttonShadow {
+  padding: 1rem 2.4rem;
+  border-radius: 0.5rem;
+  background-color: #97D3FF;
+  box-shadow: 0 0.4rem 0 #008BF2;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+@media (hover: hover) {
+  .buttonShadow:hover {
+    background-color: #57B8FF;
+  }
+
+  .buttonShadow:active {
+    transform: translateY(0.4rem);
+    box-shadow: none;
+  }
+}
+
+.buttonShadow:active {
+  transform: translateY(0.4rem);
+  box-shadow: none;
+}`);
 </script>
 
 <template>
@@ -43,6 +74,7 @@ const ButtonDefaultCssContent = ref(`
     </p>
     <ButtonDefault />
     <CodeBlock
+      id="default"
       v-model:html-content="ButtonDefaultHtmlContent"
       v-model:css-content="ButtonDefaultCssContent"
     />
@@ -52,11 +84,12 @@ const ButtonDefaultCssContent = ref(`
     <p class="text-container">
       シャドウアニメーション
     </p>
-    <!-- <ButtonShadow />
-    <CodeBlockEditable
-      html-string="{ButtonShadowHtmlString}"
-      css-string="{ButtonShadowCssString}"
-    /> -->
+    <ButtonShadow />
+    <CodeBlock
+      id="shadow"
+      v-model:html-content="ButtonShadowHtmlContent"
+      v-model:css-content="ButtonShadowCssContent"
+    />
     <p class="text-container">
       スケールアニメーション
     </p>

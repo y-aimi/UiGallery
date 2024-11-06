@@ -6,6 +6,8 @@ import { nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue';
 const htmlContent = defineModel<string>('htmlContent', { required: true });
 const cssContent = defineModel<string>('cssContent', { required: true });
 
+const id = defineProps<{ id: string }>();
+
 const isHtml = ref(true);
 
 /**
@@ -15,7 +17,7 @@ const updateStyleTag = () => {
   removeStyleTag();
 
   const styleTag = document.createElement('style');
-  styleTag.id = 'dynamic-preview-style';
+  styleTag.id = `dynamic-preview-style-${id.id}`;
   styleTag.textContent = cssContent.value;
   document.head.appendChild(styleTag);
 };
@@ -24,7 +26,7 @@ const updateStyleTag = () => {
  * プレビューのスタイルをリセット
  */
 const removeStyleTag = () => {
-  const existingStyleTag = document.getElementById('dynamic-preview-style');
+  const existingStyleTag = document.getElementById(`dynamic-preview-style-${id.id}`);
   if (existingStyleTag) {
     existingStyleTag.remove();
   }

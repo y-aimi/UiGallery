@@ -56,6 +56,34 @@ const ButtonShadowCssContent = ref(`
   transform: translateY(0.4rem);
   box-shadow: none;
 }`);
+
+const ButtonScaleHtmlContent = ref(`
+<button class="buttonScale">
+  ボタン
+</button>
+`);
+
+const ButtonScaleCssContent = ref(`
+.buttonScale {
+  padding: 1rem 2.4rem;
+  border-radius: 0.5rem;
+  background-color: #97D3FF; 
+  transition-duration: 0.2s;
+}
+
+@media (hover: hover) {
+  .buttonScale:hover {
+    transform: scale(1.1);
+  }
+
+  .buttonScale:active {
+    transform: scale(1);
+  }
+}
+
+.buttonScale:active {
+  transform: scale(1);
+}`);
 </script>
 
 <template>
@@ -93,11 +121,12 @@ const ButtonShadowCssContent = ref(`
     <p class="text-container">
       スケールアニメーション
     </p>
-    <!-- <ButtonScale />
-    <CodeBlockEditable
-      html-string="{ButtonScaleHtmlString}"
-      css-string="{ButtonScaleCssString}"
-    /> -->
+    <ButtonScale />
+    <CodeBlock
+      id="scale"
+      v-model:html-content="ButtonScaleHtmlContent"
+      v-model:css-content="ButtonScaleCssContent"
+    />
   </div>
 </template>
 

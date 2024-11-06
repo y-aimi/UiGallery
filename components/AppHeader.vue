@@ -1,5 +1,4 @@
-<script setup>
-import { AppColors } from '~/common/AppColors';
+<script setup lang="ts">
 </script>
 
 <template>
@@ -19,7 +18,7 @@ import { AppColors } from '~/common/AppColors';
   width: 100%;
   padding: 0 1.6rem;
   border-bottom: 0.2rem solid;
-  border-color: v-bind('AppColors.gray50');
+  border-color: #F2F2F2;
   background-color: rgb(255 255 255 / 75%);
   font-size: 1.6rem
 }

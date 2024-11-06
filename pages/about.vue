@@ -1,4 +1,12 @@
-<script setup>
+<!-- ref()とreactive()どちらを使うか？ -->
+<!-- refオブジェクトにvalueが自動的に付くかどうかは先頭の値がrefオブジェクトかどうかで判断される -->
+<!-- <div v-text="count"></div> のv-textなどの特別なvue属性のことをディレクティブという -->
+<!-- v-on→@, v-bind:→:に省略される -->
+<!-- 関数呼び出しを使うかcomputedを使うかはcomputedを使う。reactでいう通常の関数定義とuseMemoやuseEffectの依存配列的な感じで無駄なレンダリングが走らないようになる -->
+<!-- computedはあくまで処理をまとめる役割で、使われなかったら実行されないし副作用を含めてはいけない -->
+<!-- refとreactiverefオブジェクトにvalueが自動的に付くかどうかは先頭の値がrefオブジェクトかどうかで判断される<divv-text=></div>のv-textなどの特別なvue属性のことをディレクティブというv-on→v-bind -->
+
+<script setup lang="ts">
 import { ref } from 'vue';
 
 const price = ref(9.99);
@@ -8,7 +16,7 @@ const message = ref('<h1>Hello</h1>');
 const vueURL = ref('https://vuejs.org');
 const vueId = ref('vue-link');
 const count = ref(0);
-const countUp = (event, times) => {
+const countUp = (event: MouseEvent, times: number) => {
   count.value = event.clientX * times;
 };
 const eventName = 'keyup';
@@ -54,7 +62,7 @@ const instructor = reactive({
   age: 20,
 });
 console.log(instructor);
-const d = reactive();
+const d = reactive({});
 console.log(d);
 </script>
 
@@ -130,10 +138,3 @@ console.log(d);
   border: 1px solid red
 }
 </style>
-
-<!-- ref()とreactive()どちらを使うか？ -->
-<!-- refオブジェクトにvalueが自動的に付くかどうかは先頭の値がrefオブジェクトかどうかで判断される -->
-<!-- <div v-text="count"></div> のv-textなどの特別なvue属性のことをディレクティブという -->
-<!-- v-on→@, v-bind:→:に省略される -->
-<!-- 関数呼び出しを使うかcomputedを使うかはcomputedを使う。reactでいう通常の関数定義とuseMemoやuseEffectの依存配列的な感じで無駄なレンダリングが走らないようになる -->
-<!-- computedはあくまで処理をまとめる役割で、使われなかったら実行されないし副作用を含めてはいけない -->

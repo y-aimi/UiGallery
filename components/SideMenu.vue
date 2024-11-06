@@ -1,5 +1,4 @@
-<script setup>
-import { AppColors } from '~/common/AppColors';
+<script setup lang="ts">
 </script>
 
 <template>
@@ -61,33 +60,33 @@ import { AppColors } from '~/common/AppColors';
   overflow: auto;
   width: 30rem;
   max-height: calc(100dvh - 4.8rem);
-  background-color: v-bind('AppColors.white');
+  background-color: #FFF;
 }
 
 .h2 {
-  color: v-bind('AppColors.gray900');
+  color: #1A1A1A;
   font-weight: bold;
   margin-top: 1rem;
-  border-bottom: v-bind(`0.2rem solid ${AppColors.gray50}`);
+  border-bottom: 0.2rem solid #F2F2F2
 }
 
 .li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: v-bind('AppColors.gray900');
+  color: #1A1A1A;
   padding: 1rem 1rem 1rem 2.5rem;
   border-radius: 1rem;
   cursor: pointer;
   }
 
 .li:active {
-  background-color: v-bind('AppColors.gray100');
+  background-color: #E6E6E6
 }
 
 @media (hover :hover){
   .li:hover {
-    background-color: v-bind('AppColors.gray50');
+    background-color: #F2F2F2
   }
 }
 </style>

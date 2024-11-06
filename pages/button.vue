@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
 // ---------------------------------------------
 // style初期値定義
 // ---------------------------------------------
@@ -73,10 +75,10 @@ const ButtonDefaultCssContent = ref(`
   flex-wrap: wrap;
   justify-content: center;
   padding: 1.2rem;
-  border: 0.2rem solid #B3B3B3; /* AppColors.gray300 */
+  border: 0.2rem solid #B3B3B3;
   border-radius: 0.5rem;
   margin-bottom: 1.6rem;
-  background-color: #F2F2F2 /* AppColors.gray50 */
+  background-color: #F2F2F2
 }
 
 .button-text-container {
@@ -87,7 +89,7 @@ const ButtonDefaultCssContent = ref(`
   font-size: 1.2rem;
   width: 50%;
   padding: 2.4rem 0;
-  border-bottom: 0.2rem solid #CCC /* AppColors.gray200 */
+  border-bottom: 0.2rem solid #CCC
 }
 
 .button-text-end-container {
@@ -98,6 +100,23 @@ const ButtonDefaultCssContent = ref(`
   font-size: 1.2rem;
   width: 50%;
   padding: 2.4rem 0
+}
+
+@media (width >= 960px) {
+  .button-container {
+    padding: 2.4rem;
+    margin: 0 1.6rem 1.6rem
+  }
+
+  .button-text-container {
+    font-size: 1.6rem;
+    padding: 3.6rem 0
+  }
+
+  .button-text-end-container {
+    font-size: 1.6rem;
+    padding: 3.6rem 0
+  }
 }
 </style>
 

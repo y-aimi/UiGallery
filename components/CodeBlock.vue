@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Prism from 'prismjs';
-import { ref, watch } from 'vue';
-import { AppColors } from '~/common/AppColors';
+import { nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue';
 
 // definePropsだとreadonlyになるためv-modelで双方向バインディングにする
 const htmlContent = defineModel<string>('htmlContent', { required: true });
@@ -141,7 +140,7 @@ const handleBlurCss = (event: FocusEvent) => {
   position: absolute;
   left: 0.4rem;
   top: 0.2rem;
-  color: #7F7F7F; /* AppColors.gray500 */
+  color: #7F7F7F;
   font-size: 1rem
 }
 
@@ -184,12 +183,12 @@ const handleBlurCss = (event: FocusEvent) => {
   left: 0;
   top: 0.1rem;
   display: flex;
-  border: v-bind(`0.1rem solid ${AppColors.gray700}`);
+  border: 0.1rem solid #4D4D4D
 }
 
 .code-block-toggle {
-  background-color: v-bind('AppColors.white');
-  color: v-bind('AppColors.gray700');
+  background-color: #FFF;
+  color: #4D4D4D;
   width: 6rem;
   text-align: center;
   cursor: pointer;
@@ -197,8 +196,8 @@ const handleBlurCss = (event: FocusEvent) => {
 }
 
 .code-block-toggle-active {
-  background-color: v-bind('AppColors.blue500');
-  color: v-bind('AppColors.white');
+  background-color: #4979F5;
+  color: #FFF;
 }
 
 .code-block-edit {
@@ -216,7 +215,7 @@ const handleBlurCss = (event: FocusEvent) => {
     position: absolute;
     left: 0.4rem;
     top: 0.2rem;
-    color: v-bind('AppColors.gray500');
+    color: #7F7F7F;
     font-size: 1.6rem
   }
 

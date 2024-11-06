@@ -1,33 +1,12 @@
-<script setup>
+<script setup lang="ts">
 import Prism from 'prismjs';
 import { ref, watch } from 'vue';
 import { AppColors } from '~/common/AppColors';
 
-const sampleCss = `
-.preview {
-  padding: 1rem 2.4rem;
-  border: 0.2rem solid #0055AD;
-  border-radius: 0.5rem;
-  background-color: #97D3FF;
-  cursor: pointer;
-}
+// definePropsだとreadonlyになるためv-modelで双方向バインディングにする
+const htmlContent = defineModel<string>('htmlContent', { required: true });
+const cssContent = defineModel<string>('cssContent', { required: true });
 
-@media (hover: hover) {
-  .preview:hover {
-    background-color: #57B8FF;
-  }
-}
-
-.preview:active {
-  background-color: #008BF2;
-}`;
-
-const sampleHtml = `
-<h1>Hello</h1>
-`;
-
-const htmlContent = ref(sampleHtml);
-const cssContent = ref(sampleCss);
 const isHtml = ref(true);
 
 /**
@@ -74,8 +53,9 @@ watch([htmlContent, cssContent, isHtml], async () => {
 /**
  * HTMLコードブロックでフォーカスが外れた際のイベント
  */
-const handleBlurHtml = (event) => {
-  const codeElement = event.target.querySelector('code');
+const handleBlurHtml = (event: FocusEvent) => {
+  const target = event.target as HTMLElement;
+  const codeElement = target?.querySelector('code');
   if (codeElement && codeElement.textContent) {
     htmlContent.value = codeElement.textContent;
   }
@@ -85,8 +65,9 @@ const handleBlurHtml = (event) => {
 /**
  * CSSコードブロックでフォーカスが外れた際のイベント
  */
-const handleBlurCss = (event) => {
-  const codeElement = event.target.querySelector('code');
+const handleBlurCss = (event: FocusEvent) => {
+  const target = event.target as HTMLElement;
+  const codeElement = target?.querySelector('code');
   if (codeElement && codeElement.textContent) {
     cssContent.value = codeElement.textContent;
   }
@@ -160,7 +141,7 @@ const handleBlurCss = (event) => {
   position: absolute;
   left: 0.4rem;
   top: 0.2rem;
-  color: v-bind('AppColors.gray500');
+  color: #7F7F7F; /* AppColors.gray500 */
   font-size: 1rem
 }
 

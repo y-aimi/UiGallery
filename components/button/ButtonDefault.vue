@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { AppColors } from '~/common/AppColors';
 </script>
 
@@ -30,7 +30,7 @@ import { AppColors } from '~/common/AppColors';
     </div>
     <div class="button-text-container">
       <p>
-        <span class="important">NG</span> テキストボタン
+        <span :style="{ color: AppColors.red600 }">NG</span> テキストボタン
       </p>
       <button class="button-text-1">
         ボタン

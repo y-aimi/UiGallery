@@ -102,7 +102,7 @@ const { data, pending, error } = useFetch<SeasonAnimeResponse>('/api/season-anim
   left: -100%; /* アニメーションの開始位置 */
   height: 100%;
   width: 100%;
-  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 30%), transparent);
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 60%), transparent);
   animation: dummmy-wave 1.6s ease-in-out infinite;
 }
 

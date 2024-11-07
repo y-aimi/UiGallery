@@ -50,7 +50,7 @@ const SkeletonCssContent = ref(`
   left: -100%;
   height: 100%;
   width: 100%;
-  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 30%), transparent);
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 60%), transparent);
   animation: skeleton-wave 1.6s ease-in-out infinite;
 }
 

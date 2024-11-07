@@ -1,0 +1,11 @@
+{
+  "name": "app",
+  "dockerComposeFile": "./docker-compose.yml",
+  "service": "ui-gallery-vue",
+  "workspaceFolder": "/var/app",
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "vue.volar",
+    "stylelint.vscode-stylelint",
+  ]
+}

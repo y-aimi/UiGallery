@@ -58,7 +58,7 @@ export default defineNuxtConfig({
       lang: 'ja',
       short_name: 'UI\u30ae\u30e3\u30e9\u30ea\u30fc',
       start_url: '/',
-      display: 'standalone',
+      display: 'fullscreen',
       background_color: '#ffffff',
       icons: [
         {

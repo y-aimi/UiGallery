@@ -38,10 +38,10 @@
       </li>
       <li>
         <NuxtLink
-          to="/"
+          to="/skeleton"
           class="li"
         >
-          <p>データフェッチ</p>
+          <p>スケルトン</p>
           <font-awesome-icon
             :icon="['fas', 'chevron-right']"
             style="display: block; height: 1.6rem; width: 1.6rem;"

@@ -87,7 +87,7 @@ export default defineNuxtConfig({
       navigateFallback: null,
     },
     devOptions: {
-      enabled: true, // 開発環境でも有効化
+      enabled: false, // 開発環境は無効化
       type: 'module',
     },
   },

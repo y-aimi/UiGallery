@@ -9,9 +9,10 @@ export type Page = {
 /**
  * アプリページ情報
  */
-export const AppRoutes: { [key in 'index' | 'error' | 'button']: Page } = {
+export const AppRoutes: { [key in 'index' | 'error' | 'button' | 'skeleton']: Page } = {
   index: { name: 'index', url: '/' },
   button: { name: 'ボタン', url: '/button' },
+  skeleton: { name: 'スケルトン', url: '/skeleton' },
 
   // エラー画面
   error: { name: 'error', url: '/error' },

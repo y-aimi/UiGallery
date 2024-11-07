@@ -96,6 +96,8 @@ export const AppColors = {
   green300: '#7fffbf',
   /** 緑400 */
   green400: '#97c278',
+  /** 緑500 */
+  green500: '#2CAC6E',
 
   /** 黄色200 */
   yellow200: '#C8C99B',

@@ -49,13 +49,16 @@ const isOpen = defineModel<boolean>('isOpen', { required: true });
           style="display: block; height: 1.6rem; width: 1.6rem;"
         />
       </NuxtLink>
-      <div class="burger-menu-text-wrapper">
-        <p>プルダウン</p>
+      <NuxtLink
+        :to="AppRoutes.skeleton.url"
+        class="burger-menu-text-wrapper"
+      >
+        <p>スケルトン</p>
         <font-awesome-icon
           :icon="['fas', 'chevron-right']"
           style="display: block; height: 1.6rem; width: 1.6rem;"
         />
-      </div>
+      </NuxtLink>
     </div>
   </div>
 </template>

@@ -1,15 +1,24 @@
 <script setup lang="ts">
+import { useMediaQuery } from '@vueuse/core';
+/** マウントされたかどうか */
+const isInited = ref(false);
+
+const isPc = useMediaQuery('(min-width: 960px)');
+
+onMounted(() => {
+  isInited.value = true;
+});
 </script>
 
 <template>
   <div>
     <AppHeader />
     <main class="main">
-      <SideMenu />
+      <SideMenu v-if="isPc" />
       <div class="slot">
         <slot />
       </div>
-      <SideNavigation />
+      <SideNavigation v-if="isPc" />
     </main>
   </div>
 </template>

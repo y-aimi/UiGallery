@@ -11,7 +11,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <div ontouchstart="">
     <AppHeader />
     <main class="main">
       <SideMenu v-if="isPc" />

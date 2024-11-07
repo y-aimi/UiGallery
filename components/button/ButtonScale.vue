@@ -4,15 +4,15 @@
 <template>
   <div class="button-container">
     <div class="button-text-end-container">
-      <p>スケールボタン①</p>
+      <p>スケール①</p>
       <button class="button-scale-1">
-        ボタン
+        PCのみ
       </button>
     </div>
     <div class="button-text-end-container">
-      <p>スケールボタン②</p>
+      <p>スケール②</p>
       <button class="button-scale-2">
-        ボタン
+        PCのみ
       </button>
     </div>
   </div>

@@ -143,7 +143,7 @@ const handleBlurCss = (event: FocusEvent) => {
   left: 0.4rem;
   top: 0.2rem;
   color: #7F7F7F;
-  font-size: 1rem
+  font-size: 1.6rem
 }
 
 .code-block {
@@ -155,7 +155,7 @@ const handleBlurCss = (event: FocusEvent) => {
 .code-block-container {
   width: 100%;
   height: 32rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .code-block-html {
@@ -180,7 +180,7 @@ const handleBlurCss = (event: FocusEvent) => {
 }
 
 .code-block-toggle-container {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   position: absolute;
   left: 0;
   top: 0.1rem;

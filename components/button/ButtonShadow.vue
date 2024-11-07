@@ -4,13 +4,13 @@
 <template>
   <div class="button-container">
     <div class="button-text-end-container">
-      <p>シャドウボタン①</p>
+      <p>シャドウ①</p>
       <button class="button-shadow-1">
         ボタン
       </button>
     </div>
     <div class="button-text-end-container">
-      <p>シャドウボタン②</p>
+      <p>シャドウ②</p>
       <button class="button-shadow-2">
         ボタン
       </button>

@@ -148,7 +148,7 @@ const ButtonScaleCssContent = ref(`
   flex-direction: column;
   gap: 1rem;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   width: 50%;
   padding: 2.4rem 0;
   border-bottom: 0.2rem solid #CCC
@@ -159,7 +159,7 @@ const ButtonScaleCssContent = ref(`
   flex-direction: column;
   gap: 1rem;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   width: 50%;
   padding: 2.4rem 0
 }

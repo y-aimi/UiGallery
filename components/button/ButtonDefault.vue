@@ -4,7 +4,7 @@
 <template>
   <div class="button-container">
     <div class="button-text-container">
-      <p>塗りボタン</p>
+      <p>塗り</p>
       <button class="button-fill-1">
         ボタン
       </button>
@@ -16,7 +16,7 @@
       </button>
     </div>
     <div class="button-text-container">
-      <p>アウトラインボタン</p>
+      <p>アウトライン</p>
       <button class="button-outline-1">
         ボタン
       </button>
@@ -29,7 +29,7 @@
     </div>
     <div class="button-text-container">
       <p>
-        <span style="color: #FE3939 ">NG</span> テキストボタン
+        <span style="color: #FE3939 ">NG</span> テキスト
       </p>
       <button class="button-text-1">
         ボタン
@@ -42,7 +42,7 @@
       </button>
     </div>
     <div class="button-text-container">
-      <p>塗りボタン</p>
+      <p>塗り</p>
       <button
         class="button-disable-fill"
         disabled
@@ -52,7 +52,7 @@
     </div>
     <div class="button-text-container" />
     <div class="button-text-container">
-      <p>アウトラインボタン</p>
+      <p>アウトライン</p>
       <button
         class="button-disable-outline"
         disabled
@@ -62,7 +62,7 @@
     </div>
     <div class="button-text-container" />
     <div class="button-text-end-container">
-      <p>テキストボタン</p>
+      <p>テキスト</p>
       <button
         class="button-disable-text"
         disabled

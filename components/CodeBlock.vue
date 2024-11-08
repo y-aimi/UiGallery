@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Prism from 'prismjs';
 import { nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue';
+import { useClipboard } from '@vueuse/core';
 
 // definePropsだとreadonlyになるためv-modelで双方向バインディングにする
 const htmlContent = defineModel<string>('htmlContent', { required: true });
@@ -9,6 +10,10 @@ const cssContent = defineModel<string>('cssContent', { required: true });
 const id = defineProps<{ id: string }>();
 
 const isHtml = ref(true);
+
+// クリップボート機能
+const source = ref('');
+const { copy, copied } = useClipboard({ source });
 
 /**
  * プレビューのスタイルを動的に管理するためにheadタグに追加
@@ -103,6 +108,20 @@ const handleBlurCss = (event: FocusEvent) => {
           CSS
         </li>
       </ul>
+      <font-awesome-icon
+        v-if="!copied"
+        :icon="['fas', 'clipboard']"
+        :class="['clipboard']"
+        style="width: 2.8rem; height: 2.8rem; color: #51B883"
+        @click="copy(isHtml ? htmlContent : cssContent)"
+      />
+      <font-awesome-icon
+        v-else
+        :icon="['fas', 'clipboard-check']"
+        :class="['clipboard']"
+        style="width: 2.8rem; height: 2.8rem; color: #2CAC6E"
+        @click="copy(isHtml ? htmlContent : cssContent)"
+      />
       <div :class="'code-block-container'">
         <pre
           v-if="isHtml"
@@ -205,6 +224,13 @@ const handleBlurCss = (event: FocusEvent) => {
 
 .code-block-edit {
   display: block;
+}
+
+.clipboard {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  cursor: pointer;
 }
 
 @media (width >= 960px) {

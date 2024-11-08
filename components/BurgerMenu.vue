@@ -7,15 +7,6 @@ const isOpen = defineModel<boolean>('isOpen', { required: true });
 <template>
   <div :class="['menu', isOpen ? 'menu-open' : 'menu-close']">
     <div class="close-button-container">
-      <NuxtLink
-        :to="AppRoutes.index"
-        class="logo-container"
-      >
-        <NuxtImg
-          src="/ui_gallery_logo.svg"
-          class="logo"
-        />
-      </NuxtLink>
       <font-awesome-icon
         :icon="['fas', 'bars']"
         class="menu-button"
@@ -72,7 +63,7 @@ const isOpen = defineModel<boolean>('isOpen', { required: true });
   overflow: auto;
   width: 30rem;
   height: 100%;
-  background-color: #FFF;
+  background: linear-gradient(#E8F1FE, #FBF5E0);
   box-shadow: -0.1rem 0 5px rgb(0 0 0 / 30%);
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
@@ -97,24 +88,11 @@ const isOpen = defineModel<boolean>('isOpen', { required: true });
   backdrop-filter: blur(5px);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 100%;
   height: 4.8rem;
   padding: 0 1.6rem;
-  border-bottom: 0.2rem solid;
-  border-color: #F2F2F2;
-  background-color: rgb(255 255 255 / 75%)
-}
-
-.logo-container {
-  display: flex;
-  align-items: center
-}
-
-.logo {
-  background-size: cover;
-  height: 4.4rem;
-  width: 4.4rem
+  background-color: rgb(255 255 255 / 25%)
 }
 
 .menu-button {
@@ -127,14 +105,15 @@ const isOpen = defineModel<boolean>('isOpen', { required: true });
   width: 100%;
   max-height: calc(100dvh - 4.8rem);
   padding: 0 1.6rem;
-  background-color: #FFF
 }
 
 .burger-menu-h2 {
   color: #1A1A1A;
+  font-size: 1.8rem;
   font-weight: bold;
   margin-top: 1rem;
-  border-bottom: 0.2rem solid #F2F2F2
+  padding-bottom: 0.3rem;
+  border-bottom: 0.1rem solid #7F7F7F;
 }
 
 .burger-menu-text-wrapper {
@@ -148,12 +127,12 @@ const isOpen = defineModel<boolean>('isOpen', { required: true });
 }
 
 .burger-menu-text-wrapper:active {
-  background-color: #E6E6E6
+  background-color: #FFF
 }
 
 @media (hover :hover){
   .burger-menu-text-wrapper:hover {
-    background-color: #F2F2F2
+    background-color: #FFF
   }
 }
 </style>

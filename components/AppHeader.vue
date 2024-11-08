@@ -62,9 +62,7 @@ watch([isOpen, isPc], () => {
   height: 4.8rem;
   width: 100%;
   padding: 0 1.6rem;
-  border-bottom: 0.2rem solid;
-  border-color: #F2F2F2;
-  background-color: rgb(255 255 255 / 75%);
+  background-color: rgb(255 255 255 / 25%);
   font-size: 1.6rem
 }
 

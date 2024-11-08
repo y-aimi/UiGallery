@@ -60,14 +60,16 @@
   overflow: auto;
   width: 30rem;
   max-height: calc(100dvh - 4.8rem);
-  background-color: #FFF;
+  background-color: transparent;
 }
 
 .h2 {
   color: #1A1A1A;
+  font-size: 1.8rem;
   font-weight: bold;
   margin-top: 1rem;
-  border-bottom: 0.2rem solid #F2F2F2
+  padding-bottom: 0.3rem;
+  border-bottom: 0.1rem solid #7F7F7F;
 }
 
 .li {
@@ -81,12 +83,12 @@
   }
 
 .li:active {
-  background-color: #E6E6E6
+  background-color: #FFF
 }
 
 @media (hover :hover){
   .li:hover {
-    background-color: #F2F2F2
+    background-color: #FFF
   }
 }
 </style>

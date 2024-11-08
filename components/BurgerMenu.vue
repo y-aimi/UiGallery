@@ -8,7 +8,7 @@ const isOpen = defineModel<boolean>('isOpen', { required: true });
   <div :class="['menu', isOpen ? 'menu-open' : 'menu-close']">
     <div class="close-button-container">
       <font-awesome-icon
-        :icon="['fas', 'bars']"
+        :icon="['fas', 'xmark']"
         class="menu-button"
         @click="isOpen = false"
       />

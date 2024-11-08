@@ -17,6 +17,16 @@ onMounted(() => {
 router.afterEach(() => {
   isOpen.value = false;
 });
+
+// overlay背景スクロール制御
+watch([isOpen], () => {
+  if (isOpen.value) {
+    document.body.style.overflow = 'hidden';
+  }
+  else {
+    document.body.style.overflow = '';
+  }
+});
 </script>
 
 <template>
@@ -32,6 +42,10 @@ router.afterEach(() => {
     <BurgerMenu
       v-if="isInited && !isPc"
       v-model:is-open="isOpen"
+    />
+    <div
+      v-if="isInited && isOpen"
+      class="overlay"
     />
   </div>
 </template>
@@ -58,5 +72,15 @@ router.afterEach(() => {
   height: 2.6rem;
   width: 2.6rem;
   cursor: pointer
+}
+
+.overlay {
+  z-index: 110;
+  position: fixed;
+  top: 0;
+  background-color: #1A1A1A;
+  opacity: 0.5;
+  width: 100%;
+  height: 100dvh;
 }
 </style>

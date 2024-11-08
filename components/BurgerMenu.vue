@@ -65,10 +65,11 @@ const isOpen = defineModel<boolean>('isOpen', { required: true });
 
 <style scoped>
 .menu {
-  z-index: 100;
+  z-index: 200;
   position: fixed;
   top: 0;
   right: 0;
+  overflow: auto;
   width: 30rem;
   height: 100%;
   background-color: #FFF;

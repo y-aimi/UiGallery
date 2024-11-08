@@ -13,12 +13,14 @@ onMounted(() => {
 <template>
   <div ontouchstart="">
     <AppHeader />
-    <main class="main">
-      <SideMenu v-if="isPc" />
+    <main
+      class="main"
+    >
+      <SideMenu v-if="isInited && isPc" />
       <div class="slot">
-        <slot />
+        <NuxtPage />
       </div>
-      <SideNavigation v-if="isPc" />
+      <SideNavigation v-if="isInited && isPc" />
     </main>
   </div>
 </template>

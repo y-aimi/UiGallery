@@ -19,8 +19,8 @@ router.afterEach(() => {
 });
 
 // overlay背景スクロール制御
-watch([isOpen], () => {
-  if (isOpen.value) {
+watch([isOpen, isPc], () => {
+  if (isOpen.value && !isPc.value) {
     document.body.style.overflow = 'hidden';
   }
   else {
@@ -44,7 +44,7 @@ watch([isOpen], () => {
       v-model:is-open="isOpen"
     />
     <div
-      v-if="isInited && isOpen"
+      v-if="isInited && isOpen && !isPc"
       class="overlay"
     />
   </div>

@@ -23,6 +23,9 @@ export default defineNuxtConfig({
     /* 共通トランジション */
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
+      htmlAttrs: {
+        lang: 'ja',
+      },
       link: [
         {
           rel: 'stylesheet',

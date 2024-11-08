@@ -94,7 +94,7 @@ const SkeletonCssContent = ref(`
       </p>
       <font-awesome-icon
         :icon="['fas', 'rotate']"
-        :style="{ height: '2.4rem', width: '2.4rem', marginRight: '1.6rem', color: disableRefresh ? '#E6E6E6' : '#2CAC6E' }"
+        :style="{ height: '2.4rem', width: '2.4rem', marginRight: '1.6rem', cursor: 'pointer', color: disableRefresh ? '#E6E6E6' : '#2CAC6E' }"
         @click="refresh"
       />
     </div>

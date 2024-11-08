@@ -129,6 +129,14 @@ const { data, pending, error } = useFetch<SeasonAnimeResponse>('/api/season-anim
 }
 
 @media (width >= 960px) {
+  .container {
+    margin: 0 1.6rem 1.6rem;
+  }
+
+  .anime-container {
+    gap: 2.4rem
+  }
+
   .img {
     height: 18.4rem;
     width: 15.2rem

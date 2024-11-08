@@ -126,13 +126,13 @@ const isOpen = defineModel<boolean>('isOpen', { required: true });
   cursor: pointer
 }
 
-.burger-menu-text-wrapper:active {
-  background-color: #FFF
-}
-
 @media (hover :hover){
   .burger-menu-text-wrapper:hover {
-    background-color: #FFF
+    background-color: rgb(255 255 255 / 50%)
   }
+}
+
+.burger-menu-text-wrapper:active {
+  background-color: rgb(255 255 255 / 35%)
 }
 </style>

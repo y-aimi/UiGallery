@@ -82,13 +82,13 @@
   cursor: pointer;
   }
 
-.li:active {
-  background-color: #FFF
-}
-
 @media (hover :hover){
   .li:hover {
-    background-color: #FFF
+    background-color: rgb(255 255 255 / 50%)
   }
+}
+
+.li:active {
+  background-color: rgb(255 255 255 / 35%)
 }
 </style>

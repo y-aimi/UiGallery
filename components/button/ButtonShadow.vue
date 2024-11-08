@@ -26,20 +26,11 @@
   box-shadow: 0 0.4rem 0 #008BF2
 }
 
-.button-shadow-1:active {
-  transform: translateY(0.4rem);
-  box-shadow: none
-}
-
 .button-shadow-2 {
   padding: 1rem 2.4rem;
   border-radius: 0.5rem;
   background-color: #97D3FF;
   box-shadow: 0 0.4rem 0 #008BF2,
-}
-
-.button-shadow-2:active {
-  background-color: #57B8FF
 }
 
 @media (hover :hover){
@@ -51,5 +42,14 @@
     transform: translateY(0.4rem);
     box-shadow: none
   }
+}
+
+.button-shadow-1:active {
+  transform: translateY(0.4rem);
+  box-shadow: none
+}
+
+.button-shadow-2:active {
+  background-color: #57B8FF
 }
 </style>

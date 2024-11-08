@@ -82,19 +82,11 @@
   background-color: #97D3FF;
 }
 
-.button-fill-1:active {
-  background-color: #008BF2;
-}
-
 .button-fill-2 {
   padding: 1rem 2.4rem;
   border: 0.2rem solid #0055AD;
   border-radius: 0.5rem;
   background-color: #97D3FF;
-}
-
-.button-fill-2:active {
-  background-color: #008BF2;
 }
 
 .button-outline-1 {
@@ -103,18 +95,10 @@
   border-radius: 0.5rem
 }
 
-.button-outline-1:active {
-  background-color: #CCC;
-}
-
 .button-outline-2 {
   padding: 1rem 2.4rem;
   border: 0.2rem solid #0055AD;
   border-radius: 0.5rem
-}
-
-.button-outline-2:active {
-  background-color: #CCC;
 }
 
 .button-text-1 {
@@ -122,19 +106,11 @@
   border-radius: 0.5rem
 }
 
-.button-text-1:active {
-  background-color: #CCC;
-}
-
 .button-text-2 {
   padding: 1rem 2.4rem;
   border-radius: 0.5rem;
   text-decoration-line: underline;
   text-underline-offset: 0.2rem
-}
-
-.button-text-2:active {
-  background-color: #CCC;
 }
 
 .button-disable-fill {
@@ -187,5 +163,29 @@
   .button-text-2:hover {
     background-color: #E6E6E6;
   }
+}
+
+.button-fill-1:active {
+  background-color: #008BF2;
+}
+
+.button-fill-2:active {
+  background-color: #008BF2;
+}
+
+.button-outline-1:active {
+  background-color: #CCC;
+}
+
+.button-outline-2:active {
+  background-color: #CCC;
+}
+
+.button-text-1:active {
+  background-color: #CCC;
+}
+
+.button-text-2:active {
+  background-color: #CCC;
 }
 </style>

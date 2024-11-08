@@ -20,6 +20,7 @@ const updateStyleTag = () => {
   styleTag.id = `dynamic-preview-style-${id.id}`;
   styleTag.textContent = cssContent.value;
   document.head.appendChild(styleTag);
+  Prism.highlightAll();
 };
 
 /**

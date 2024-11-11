@@ -58,7 +58,7 @@
   top: 4.8rem;
   left: 0;
   overflow: auto;
-  width: 30rem;
+  width: 0;
   max-height: calc(100dvh - 4.8rem);
   background-color: transparent;
 }
@@ -90,5 +90,11 @@
 
 .li:active {
   background-color: rgb(255 255 255 / 35%)
+}
+
+@media (width >= 960px) {
+ .nav {
+  width: 30rem;
+ }
 }
 </style>

@@ -33,7 +33,6 @@ watch([isOpen, isPc], () => {
   <div>
     <header class="header">
       <font-awesome-icon
-        v-if="isInited && !isPc"
         :icon="['fas', 'bars']"
         class="menu-button"
         @click="isOpen = true"
@@ -80,5 +79,12 @@ watch([isOpen, isPc], () => {
   opacity: 0.5;
   width: 100%;
   height: 100dvh;
+}
+
+@media (width >= 960px) {
+  .menu-button {
+    height: 0;
+    width: 0;
+  }
 }
 </style>

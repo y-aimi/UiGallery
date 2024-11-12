@@ -13,17 +13,21 @@ const ButtonDefaultHtmlContent = ref(`
 const ButtonDefaultCssContent = ref(`
 .button {
   padding: 1rem 2.4rem;
-  border: 0.2rem solid #0055AD;
+  border: 0.2rem solid #39ABFF;
   border-radius: 0.5rem;
-  background-color: #97D3FF;
+  color: #39ABFF;
+  background-color: #FFF;
 }
 @media (hover: hover) {
   .button:hover {
-    background-color: #57B8FF;
+    background-color: #39ABFF;
+    color: #FFF;
+    transition: all 0.3s;
   }
 }
 .button:active {
   background-color: #008BF2;
+  border-color: #008BF2;
 }`);
 
 const ButtonShadowHtmlContent = ref(`

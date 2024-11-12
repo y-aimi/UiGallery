@@ -29,65 +29,6 @@ const ButtonDefaultCssContent = ref(`
   background-color: #008BF2;
   border-color: #008BF2;
 }`);
-
-const ButtonShadowHtmlContent = ref(`
-<button class="buttonShadow">
-  ボタン
-</button>
-`);
-
-const ButtonShadowCssContent = ref(`
-.buttonShadow {
-  padding: 1rem 2.4rem;
-  border-radius: 0.5rem;
-  background-color: #97D3FF;
-  box-shadow: 0 0.4rem 0 #008BF2;
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-}
-
-@media (hover: hover) {
-  .buttonShadow:hover {
-    background-color: #57B8FF;
-  }
-
-  .buttonShadow:active {
-    transform: translateY(0.4rem);
-    box-shadow: none;
-  }
-}
-
-.buttonShadow:active {
-  transform: translateY(0.4rem);
-  box-shadow: none;
-}`);
-
-const ButtonScaleHtmlContent = ref(`
-<button class="buttonScale">
-  ボタン
-</button>
-`);
-
-const ButtonScaleCssContent = ref(`
-.buttonScale {
-  padding: 1rem 2.4rem;
-  border-radius: 0.5rem;
-  background-color: #97D3FF; 
-  transition-duration: 0.2s;
-}
-
-@media (hover: hover) {
-  .buttonScale:hover {
-    transform: scale(1.1);
-  }
-
-  .buttonScale:active {
-    transform: scale(1);
-  }
-}
-
-.buttonScale:active {
-  transform: scale(1);
-}`);
 </script>
 
 <template>
@@ -98,38 +39,22 @@ const ButtonScaleCssContent = ref(`
     <div class="text-container">
       <p>ボタンのUIギャラリーです</p>
     </div>
-    <h2 class="h2">
-      基本デザイン
-    </h2>
-    <p class="text-container">
-      基本的なデザインパターン
-    </p>
-    <ButtonDefault />
+    <div class="button-container">
+      <ButtonColorInversion />
+      <ButtonColorInversionUnderline />
+      <ButtonBackgroundAnimation />
+      <ButtonUnderlineAnimation />
+      <ButtonRipple />
+      <ButtonTwinkle />
+      <ButtonMovingLight />
+      <ButtonShadow />
+      <ButtonScale />
+      <div class="button-text-end-container" />
+    </div>
     <CodeBlock
       id="default"
       v-model:html-content="ButtonDefaultHtmlContent"
       v-model:css-content="ButtonDefaultCssContent"
-    />
-    <h2 class="h2">
-      アニメーションデザイン
-    </h2>
-    <p class="text-container">
-      シャドウアニメーション
-    </p>
-    <ButtonShadow />
-    <CodeBlock
-      id="shadow"
-      v-model:html-content="ButtonShadowHtmlContent"
-      v-model:css-content="ButtonShadowCssContent"
-    />
-    <p class="text-container">
-      スケールアニメーション
-    </p>
-    <ButtonScale />
-    <CodeBlock
-      id="scale"
-      v-model:html-content="ButtonScaleHtmlContent"
-      v-model:css-content="ButtonScaleCssContent"
     />
   </div>
 </template>
@@ -153,7 +78,7 @@ const ButtonScaleCssContent = ref(`
   gap: 1rem;
   align-items: center;
   font-size: 1.6rem;
-  width: 50%;
+  width: 100%;
   padding: 2.4rem 0;
   border-bottom: 0.2rem solid #CCC
 }
@@ -176,7 +101,8 @@ const ButtonScaleCssContent = ref(`
 
   .button-text-container {
     font-size: 1.6rem;
-    padding: 3.6rem 0
+    padding: 3.6rem 0;
+    width: 50%;
   }
 
   .button-text-end-container {

@@ -82,15 +82,9 @@ const SkeletonCssContent = ref(`
     <h1 class="h1">
       スケルトン
     </h1>
-    <p class="text">
-      スケルトンのUIギャラリーです
-    </p>
-    <h2 class="h2">
-      基本デザイン
-    </h2>
     <div class="text-container">
       <p class="text">
-        基本的なスケルトンデザイン<br>（今期アニメ一覧）
+        スケルトンのUIギャラリーです<br>（今期アニメ一覧）
       </p>
       <font-awesome-icon
         :icon="['fas', 'rotate']"

@@ -18,19 +18,24 @@ const refresh = async () => {
   setTimeout(() => {
     disableRefresh.value = false;
   }, 1000);
+
+  // コードブロックを初期化
+  SkeletonHtmlContent.value = SkeletonHtmlInit;
+  SkeletonCssContent.value = SkeletonCssInit;
 };
 
 // ---------------------------------------------
 // style初期値定義
 // ---------------------------------------------
-const SkeletonHtmlContent = ref(`
+const SkeletonHtmlInit = `
 <div class="skeleton-container">
   <div class="skeleton skeleton-img"></div>
   <div class="skeleton skeleton-title"></div>
 </div>
-`);
+`;
+const SkeletonHtmlContent = ref(SkeletonHtmlInit);
 
-const SkeletonCssContent = ref(`
+const SkeletonCssInit = `
 .skeleton-container {
   display: flex;
   flex-direction: column;
@@ -74,7 +79,8 @@ const SkeletonCssContent = ref(`
   100% {
     left: 100%;
   }
-}`);
+}`;
+const SkeletonCssContent = ref(SkeletonCssInit);
 </script>
 
 <template>

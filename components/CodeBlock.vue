@@ -205,12 +205,12 @@ const handleBlurCss = (event: FocusEvent) => {
   left: 0;
   top: 0.1rem;
   display: flex;
-  border: 0.1rem solid #4D4D4D
+  border: 0.2rem solid #1D8B56
 }
 
 .code-block-toggle {
-  background-color: #FFF;
-  color: #4D4D4D;
+  background-color: #F2F2F2;
+  color: #2d2d2d;
   width: 6rem;
   text-align: center;
   cursor: pointer;
@@ -218,8 +218,8 @@ const handleBlurCss = (event: FocusEvent) => {
 }
 
 .code-block-toggle-active {
-  background-color: #4979F5;
-  color: #FFF;
+  background-color: #51B883;
+  color: #F2F2F2;
 }
 
 .code-block-edit {
@@ -254,6 +254,11 @@ const handleBlurCss = (event: FocusEvent) => {
 
   .code-block-container {
     font-size: 1.6rem
+  }
+
+  .code-block-toggle {
+    width: 7rem;
+    padding: 0.4rem
   }
 }
 </style>

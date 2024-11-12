@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useMediaQuery } from '@vueuse/core';
+
+const isPc = ref(true);
+isPc.value = useMediaQuery('(min-width: 960px)').value;
 
 // ---------------------------------------------
 // style初期値定義
@@ -40,16 +44,42 @@ const ButtonDefaultCssContent = ref(`
       <p>ボタンのUIギャラリーです</p>
     </div>
     <div class="button-container">
-      <ButtonColorInversion />
-      <ButtonColorInversionUnderline />
-      <ButtonBackgroundAnimation />
-      <ButtonUnderlineAnimation />
-      <ButtonRipple />
-      <ButtonTwinkle />
-      <ButtonMovingLight />
-      <ButtonShadow />
-      <ButtonScale />
-      <div class="button-text-end-container" />
+      <ButtonColorInversion
+        v-model:html-content="ButtonDefaultHtmlContent"
+        v-model:css-content="ButtonDefaultCssContent"
+      />
+      <ButtonColorInversionUnderline
+        v-model:html-content="ButtonDefaultHtmlContent"
+        v-model:css-content="ButtonDefaultCssContent"
+      />
+      <ButtonBackgroundAnimation
+        v-model:html-content="ButtonDefaultHtmlContent"
+        v-model:css-content="ButtonDefaultCssContent"
+      />
+      <ButtonUnderlineAnimation
+        v-model:html-content="ButtonDefaultHtmlContent"
+        v-model:css-content="ButtonDefaultCssContent"
+      />
+      <ButtonRipple
+        v-model:html-content="ButtonDefaultHtmlContent"
+        v-model:css-content="ButtonDefaultCssContent"
+      />
+      <ButtonTwinkle
+        v-model:html-content="ButtonDefaultHtmlContent"
+        v-model:css-content="ButtonDefaultCssContent"
+      />
+      <ButtonMovingLight
+        v-model:html-content="ButtonDefaultHtmlContent"
+        v-model:css-content="ButtonDefaultCssContent"
+      />
+      <ButtonShadow
+        v-model:html-content="ButtonDefaultHtmlContent"
+        v-model:css-content="ButtonDefaultCssContent"
+      />
+      <ButtonScale
+        v-model:html-content="ButtonDefaultHtmlContent"
+        v-model:css-content="ButtonDefaultCssContent"
+      />
     </div>
     <CodeBlock
       id="default"
@@ -64,7 +94,6 @@ const ButtonDefaultCssContent = ref(`
 .button-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   padding: 1.2rem;
   border: 0.2rem solid #B3B3B3;
   border-radius: 0.5rem;
@@ -72,7 +101,7 @@ const ButtonDefaultCssContent = ref(`
   background-color: #F2F2F2
 }
 
-.button-text-container {
+.button-section {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -83,14 +112,51 @@ const ButtonDefaultCssContent = ref(`
   border-bottom: 0.2rem solid #CCC
 }
 
-.button-text-end-container {
+.button-section-end {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
   font-size: 1.6rem;
-  width: 50%;
-  padding: 2.4rem 0
+  width: 100%;
+  padding: 2.4rem 0;
+}
+
+.title-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  height: 3.5rem;
+  min-width: 24rem;
+}
+
+.edit-icon {
+  position: absolute;
+  top:0;
+  right:0;
+  width: 1.6rem;
+  height: 1.6rem;
+  color: #51B883;
+  background-color: #E6F5EC;
+  padding: 0.3rem;
+  border: 0.2rem solid #51B883;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+@media (hover :hover){
+  .edit-icon:hover {
+    background-color: #51B883;
+    color: #E6F5EC;
+    transition: all 0.3s;
+  }
+}
+
+.edit-icon:active {
+  background-color: #259D63;
+  border-color: #259D63;
 }
 
 @media (width >= 960px) {
@@ -99,15 +165,21 @@ const ButtonDefaultCssContent = ref(`
     margin: 0 1.6rem 1.6rem
   }
 
-  .button-text-container {
+  .button-section {
     font-size: 1.6rem;
     padding: 3.6rem 0;
     width: 50%;
   }
 
-  .button-text-end-container {
+  .button-section-end {
     font-size: 1.6rem;
-    padding: 3.6rem 0
+    padding: 3.6rem 0;
+    width: 50%;
+  }
+
+  .edit-icon {
+    width: 2rem;
+    height: 2rem;
   }
 }
 </style>

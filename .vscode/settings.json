@@ -12,4 +12,5 @@
     "source.formatDocument": "explicit",
     "source.addMissingImports": "explicit"
   },
+  "editor.gotoLocation.multipleDefinitions": "goto"
 }

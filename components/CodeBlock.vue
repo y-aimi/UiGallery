@@ -151,7 +151,7 @@ const handleBlurCss = (event: FocusEvent) => {
   position: relative;
   display: flex;
   background-color: #2d2d2d;
-  padding: 3.2rem;
+  padding: 2.8rem 0.6rem;
   min-height: 10rem
 }
 

@@ -19,7 +19,7 @@ const CssContentInit = `
   display: block;
   position: relative;
   width: 1.7rem;
-  margin-left: 0.6rem;
+  margin-left: 0.8rem;
   flex-shrink: 0;
   transform-origin: center 43%;
   transition: transform 0.4s;
@@ -46,8 +46,9 @@ const CssContentInit = `
 }
 
 .prev-details {
-  width: 70%;
+  width: 100%;
   color: #1A1A1A;
+  font-size: 1.2rem;
 }
 
 .prev-details[open] .prev-icon {
@@ -77,6 +78,13 @@ const CssContentInit = `
   .prev-summary:hover {
     background-color: #F0F9FF;
     transition: all 0.3s;
+  }
+}
+
+@media (width >= 960px) {
+  .prev-details {
+    width: 70%;
+    font-size: 1.6rem;
   }
 }
 
@@ -126,7 +134,7 @@ const handleClick = () => {
   display: block;
   position: relative;
   width: 1.7rem;
-  margin-left: 0.6rem;
+  margin-left: 0.8rem;
   flex-shrink: 0;
   transform-origin: center 43%;
   transition: transform 0.4s;
@@ -153,8 +161,9 @@ const handleClick = () => {
 }
 
 .details {
-  width: 70%;
+  width: 100%;
   color: #1A1A1A;
+  font-size: 1.2rem;
 }
 
 .details[open] .icon {
@@ -184,6 +193,13 @@ const handleClick = () => {
   .summary:hover {
     background-color: #F0F9FF;
     transition: all 0.3s;
+  }
+}
+
+@media (width >= 960px) {
+  .details {
+    width: 70%;
+    font-size: 1.6rem;
   }
 }
 </style>

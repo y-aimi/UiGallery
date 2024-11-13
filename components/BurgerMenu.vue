@@ -50,6 +50,16 @@ const isOpen = defineModel<boolean>('isOpen', { required: true });
           style="display: block; height: 1.6rem; width: 1.6rem;"
         />
       </NuxtLink>
+      <NuxtLink
+        :to="AppRoutes.accordion.url"
+        class="burger-menu-text-wrapper"
+      >
+        <p>アコーディオン</p>
+        <font-awesome-icon
+          :icon="['fas', 'chevron-right']"
+          style="display: block; height: 1.6rem; width: 1.6rem;"
+        />
+      </NuxtLink>
     </div>
   </div>
 </template>

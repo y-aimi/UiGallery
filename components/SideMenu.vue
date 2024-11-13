@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { AppRoutes } from '~/common/AppRoutes';
 </script>
 
 <template>
@@ -9,7 +10,7 @@
       </h2>
       <li>
         <NuxtLink
-          to="/"
+          :to="AppRoutes.index.url"
           class="li"
         >
           <p>はじめる</p>
@@ -26,7 +27,7 @@
       </h2>
       <li>
         <NuxtLink
-          to="/button"
+          :to="AppRoutes.button.url"
           class="li"
         >
           <p>ボタン</p>
@@ -38,10 +39,22 @@
       </li>
       <li>
         <NuxtLink
-          to="/skeleton"
+          :to="AppRoutes.skeleton.url"
           class="li"
         >
           <p>スケルトン</p>
+          <font-awesome-icon
+            :icon="['fas', 'chevron-right']"
+            style="display: block; height: 1.6rem; width: 1.6rem;"
+          />
+        </NuxtLink>
+      </li>
+      <li>
+        <NuxtLink
+          :to="AppRoutes.accordion.url"
+          class="li"
+        >
+          <p>アコーディオン</p>
           <font-awesome-icon
             :icon="['fas', 'chevron-right']"
             style="display: block; height: 1.6rem; width: 1.6rem;"

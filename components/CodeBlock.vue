@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { useClipboard } from '@vueuse/core';
 import Prism from 'prismjs';
 import { nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue';
-import { useClipboard } from '@vueuse/core';
 
 // definePropsだとreadonlyになるためv-modelで双方向バインディングにする
 const htmlContent = defineModel<string>('htmlContent', { required: true });
@@ -150,11 +150,9 @@ const handleBlurCss = (event: FocusEvent) => {
 .preview-container {
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #2d2d2d;
   padding: 3.2rem;
-  height: 16rem
+  min-height: 10rem
 }
 
 .preview-container::before {
@@ -164,6 +162,12 @@ const handleBlurCss = (event: FocusEvent) => {
   top: 0.2rem;
   color: #7F7F7F;
   font-size: 1.6rem
+}
+
+.preview {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .code-block {

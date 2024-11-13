@@ -1,9 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useMediaQuery } from '@vueuse/core';
-
-const isPc = ref(true);
-isPc.value = useMediaQuery('(min-width: 960px)').value;
 
 // ---------------------------------------------
 // style初期値定義
@@ -91,16 +87,6 @@ const ButtonDefaultCssContent = ref(`
 
 <!-- buttonページ共通style -->
 <style>
-.button-container {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1.2rem;
-  border: 0.2rem solid #B3B3B3;
-  border-radius: 0.5rem;
-  margin-bottom: 1.6rem;
-  background-color: #F2F2F2
-}
-
 .button-section {
   display: flex;
   flex-direction: column;
@@ -185,6 +171,16 @@ const ButtonDefaultCssContent = ref(`
 </style>
 
 <style scoped>
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.2rem;
+  border: 0.2rem solid #B3B3B3;
+  border-radius: 0.5rem;
+  margin-bottom: 1.6rem;
+  background-color: #F2F2F2
+}
+
 .h1 {
   font-size: 2.4rem;
   font-weight: bold

@@ -91,6 +91,11 @@ const ButtonDefaultCssContent = ref(`
   }
 }
 
+/* Safariデフォルトのアイコンを非表示 */
+summary::-webkit-details-marker {
+  display: none;
+}
+
 /* プレビューの動きを滑らかにする用のため本来不要 */
 .prev-area {
   display: flex;

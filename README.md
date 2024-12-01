@@ -1,75 +1,36 @@
-# Nuxt 3 Minimal Starter
+# アプリ説明
+## 概要
+UIギャラリー  
+https://ui-gallery-one.vercel.app/
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Nuxt.jsを使用した様々なUIコンポーネントのギャラリーサイトです。  
+HTMLとCSSが編集とコピペが可能なため気になったコンポーネントを簡単に利用できます。  
 
-## Setup
+レスポンシブ対応済み。  
+PWA対応済み。
 
-Make sure to install the dependencies:
+## 動作確認
+MacBook Pro
 
-```bash
-# npm
-npm install
+# 環境構築手順
 
-# pnpm
-pnpm install
+## 前提条件
 
-# yarn
-yarn install
+VSCodeのExtensionでDev Containerをインストールする。  
+https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
 
-# bun
-bun install
+## 手順①：dockerビルド
+
+docker-compose.ymlファイルがあるディレクトリ（rootディレクトリ）に移動し、  
+下記コマンドでdockerビルドを実行。  
+
+```
+docker compose up --build
 ```
 
-## Development Server
+## 手順②：リポジトリをVSCodeで起動し、コンテナで起動する
 
-Start the development server on `http://localhost:3000`:
+Dev Containerの機能を使い、「コンテナーで再度開く」をクリック  
+画像のように左下に「開発コンテナー」と出ていれば成功
 
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+![image](https://github.com/user-attachments/assets/86d411d0-2362-4b94-9365-ab156bc71431)
